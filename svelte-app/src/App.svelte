@@ -1,5 +1,5 @@
 <script>
-  import Component from 'svelte-app-components/dist/Component.ssr.js';
+  import {Component} from 'svelte-app-components';
   let name = 'tomp';
   let _innerWidth;
 </script>

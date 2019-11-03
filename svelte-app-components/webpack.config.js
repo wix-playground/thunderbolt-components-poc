@@ -9,7 +9,7 @@ module.exports = {
   target: 'web',
   node: false,
   entry: {
-    bundle: ['./src/client.js'],
+    bundle: ['./src/index.js'],
   },
   resolve: {
     extensions: ['.mjs', '.js', '.svelte'],
@@ -18,9 +18,10 @@ module.exports = {
     },
   },
   output: {
-    path: resolve(__dirname, 'dist'),
-    filename: '[name].js',
-    chunkFilename: '[name].[id].js',
+    path: resolve(__dirname, 'dist', 'client'),
+    filename: 'index.js',
+    libraryTarget: 'umd',
+    umdNamedDefine: true
   },
   module: {
     rules: [

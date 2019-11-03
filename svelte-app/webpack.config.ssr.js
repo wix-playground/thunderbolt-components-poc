@@ -14,6 +14,7 @@ module.exports = {
     extensions: ['.mjs', '.js', '.svelte'],
     alias: {
       svelte: resolve(__dirname, 'node_modules', 'svelte'),
+      'svelte-app-components': resolve(__dirname, 'node_modules', 'svelte-app-components', 'dist', 'ssr'),
     },
   },
   output: {

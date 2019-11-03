@@ -8,7 +8,7 @@ module.exports = {
   cache: true,
   target: 'node',
   entry: {
-    bundle: ['./src/Component.ssr.js'],
+    bundle: ['./src/index.js'],
   },
   resolve: {
     extensions: ['.mjs', '.js', '.svelte'],
@@ -17,8 +17,8 @@ module.exports = {
     },
   },
   output: {
-    path: resolve(__dirname, 'dist'),
-    filename: 'Component.ssr.js',
+    path: resolve(__dirname, 'dist', 'ssr'),
+    filename: 'index.js',
     libraryTarget: 'umd',
     umdNamedDefine: true
   },
