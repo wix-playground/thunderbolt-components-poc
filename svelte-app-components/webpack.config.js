@@ -9,7 +9,7 @@ module.exports = {
   target: 'web',
   node: false,
   entry: {
-    bundle: ['./src/index.js'],
+    bundle: ['./src/client.js'],
   },
   resolve: {
     extensions: ['.mjs', '.js', '.svelte'],

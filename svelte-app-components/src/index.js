@@ -1,3 +1,5 @@
-module.exports ={
-  Component: require('./Component.svelte').default
+const svelteAppComponents = {
+	Component: require('./Component.svelte').default,
 }
+
+module.exports = svelteAppComponents

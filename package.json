@@ -1,0 +1,7 @@
+{
+  "name": "svelte-poc-root",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "cd svelte-app-components && yarn build:all && cd .. && cd svelte-app && yarn build:all && cd .. && cp -r svelte-app-components/dist/ svelte-app/public/components/ && cd svelte-app && yarn serve:ssr"
+  }
+}

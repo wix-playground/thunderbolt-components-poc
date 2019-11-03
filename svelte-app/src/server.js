@@ -16,6 +16,7 @@ app.get('/', async (req, res) => {
       <div id="root">
         ${html}
       </div>
+       <script src="/public/components/client/index.js"></script>
        <script type="module" src="/public/bundle.js"></script>
    </body>
   </html>`);
