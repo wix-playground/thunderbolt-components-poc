@@ -3,7 +3,7 @@ import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
-import rollup_start_dev from './rollup_start_dev';
+import rollup_start_dev from './__rollup_start_dev';
 
 const production = !process.env.ROLLUP_WATCH;
 
