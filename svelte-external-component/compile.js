@@ -4,7 +4,9 @@ const rollup = require('rollup');
 
 const source = fs.readFileSync('./src/components/First.svelte', {encoding: 'utf-8'})
 
-const {js: {code: javascript}, css: {code: stylesheet}} = svelte.compile(source, {});
+const {js: {code: javascript}, css: {code: stylesheet}} = svelte.compile(source, {
+	generate: 'ssr',
+});
 
 const fileName = (isBundle = false) => `./dist/components/First${isBundle ? '.bundle' : ''}.js`
 

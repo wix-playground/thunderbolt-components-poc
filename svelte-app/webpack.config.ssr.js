@@ -6,10 +6,9 @@ const prod = mode === 'production'
 
 module.exports = {
   cache: true,
-  target: 'web',
-  node: false,
+  target: 'node',
   entry: {
-    bundle: ['./src/client.js'],
+    bundle: ['./src/server.js'],
   },
   resolve: {
     extensions: ['.mjs', '.js', '.svelte'],
@@ -19,8 +18,7 @@ module.exports = {
   },
   output: {
     path: resolve(__dirname, 'public'),
-    filename: '[name].js',
-    chunkFilename: '[name].[id].js',
+    filename: 'server.js'
   },
   module: {
     rules: [
@@ -30,8 +28,7 @@ module.exports = {
         use: {
           loader: 'svelte-loader',
           options: {
-            emitCss: true,
-            hydratable: true
+            generate: 'ssr'
           },
         },
       },
