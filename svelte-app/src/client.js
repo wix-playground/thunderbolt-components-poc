@@ -6,7 +6,4 @@ const app = new App({
   props: { name: 'world' },
 })
 
-
-window.app = app
-
 export default app

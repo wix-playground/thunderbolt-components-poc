@@ -15,13 +15,16 @@ module.exports = {
     extensions: ['.mjs', '.js', '.svelte'],
     alias: {
       svelte: resolve(__dirname, 'node_modules', 'svelte'),
-      'svelte-app-components': resolve(__dirname, 'node_modules', 'svelte-app-components', 'dist', 'client'),
+      //'svelte-app-components': resolve(__dirname, 'node_modules', 'svelte-app-components', 'dist', 'client'),
     },
   },
   output: {
     path: resolve(__dirname, 'public'),
     filename: '[name].js',
     chunkFilename: '[name].[id].js',
+  },
+  externals: {
+    "svelte-app-components": 'svelteAppComponents'
   },
   module: {
     rules: [

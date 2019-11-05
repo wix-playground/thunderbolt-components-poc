@@ -19,8 +19,8 @@
     "build": "cross-env NODE_ENV=production webpack",
     "dev": "webpack-serve --static public/ --port 8080",
     "build:all": "npm run build:ssr && npm run build:client",
-    "build:client": "webpack --config ./webpack.config.js",
-    "build:ssr": "webpack --config ./webpack.config.ssr.js",
+    "build:client": "webpack --config ./webpack.config.js --json > stats_client.json",
+    "build:ssr": "webpack --config ./webpack.config.ssr.js --json > stats_SSR.json",
     "serve:ssr": "node public/server"
   },
   "dependencies": {}

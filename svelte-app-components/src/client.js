@@ -1,11 +1,21 @@
-import Component from './Component.svelte'
+__webpack_public_path__ = 'http://localhost:3000/public/components/client/'
 
-const component = new Component({
-  target: document.getElementById('root'),
-  hydrate: true,
-  props: { name: 'world' },
-})
+const svelteAppComponents = {
+	Component: import('./Component.svelte'),
+	Component2: import('./Component2.svelte'),
+	Component3: import('./Component3.svelte'),
+}
 
-window.component = component
+// const importAll = (r) => {
+// 	r.keys().forEach(key => {
+// 		let componentName = key.replace('.svelte', '').replace('./', '')
+// 		console.log('import = >' , key);
+//
+// 		svelteAppComponents[componentName] = import(require.resolve(key))
+// 	})
+// }
+//
+// importAll(require.context('./', true, /\.svelte$/))
 
-export default component
+window.svelteAppComponents = svelteAppComponents
+module.exports = svelteAppComponents
