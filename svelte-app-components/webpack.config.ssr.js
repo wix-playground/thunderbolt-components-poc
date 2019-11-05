@@ -38,4 +38,5 @@ module.exports = {
   },
   mode,
   devtool: prod ? false : 'source-map',
+  stats: 'normal'
 }
