@@ -1,3 +1,1 @@
-module.exports ={
-  Component: require('./Component.svelte').default
-}
+export {default as Component} from './Component.svelte'

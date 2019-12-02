@@ -5,7 +5,7 @@ const App = require('./App.svelte').default
 
 app.use('/public', express.static('public'));
 
-app.get('/', async (req, res) => {
+app.get('/app', async (req, res) => {
   const {html} = await App.render();
   return res.send(`<!DOCTYPE html>
   <html lang="en">
